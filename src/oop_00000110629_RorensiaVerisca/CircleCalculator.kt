@@ -7,8 +7,7 @@ fun main(args: Array<String>) {
     var area: Double = pi * radius * radius
 // Output
     println("Radius: " + radius + ", Area: " + area)
-    // Logic check
-    println(checkSize(area))
+    checkSize(area)
 }
 fun checkSize(area: Double) {
     if (area > 100) {
