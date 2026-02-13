@@ -13,5 +13,7 @@ class Student (
             println("test")
         }
     }
-
+    constructor(name: String, nim: String) : this (name, nim, "Non-Matriculated"){
+        println("LOG : Menggunkan constructor jalur umum (Tanpa Jurusan).")
+    }
 }
