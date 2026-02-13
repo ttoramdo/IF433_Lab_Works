@@ -1,4 +1,4 @@
-package oop_00000110629_RorensiaVerisca
+package week1
 
 fun main() {
     val gameTitle = "Puzzle Seventeen"
