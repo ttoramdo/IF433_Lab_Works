@@ -36,8 +36,6 @@ fun main() {
     } else{
         println("Pilihan ngawur, pendaftaran batal!")
     }
-
-
 }
 
 
