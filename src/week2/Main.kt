@@ -36,25 +36,37 @@ fun main() {
     } else{
         println("Pilihan ngawur, pendaftaran batal!")
     }
-    println("--- Library UMN ---")
-    print("Judul: ")
-    val judul = scanner.nextLine()
-
-    print("Peminjam: ")
-    val peminjam = scanner.nextLine()
-
-    print("Durasi: ")
-    var durasi = scanner.nextInt()
+    print("Mau Pinjam Buku? (1. Mauu, 2. Skip): ")
+    val tipe = scanner.nextInt()
     scanner.nextLine()
 
-    if (durasi < 0) {
-        durasi = 1
+    if (tipe == 1) {
+        println("--- Library UMN ---")
+        print("Judul: ")
+        val judul = scanner.nextLine()
+
+        print("Peminjam: ")
+        val peminjam = scanner.nextLine()
+
+        print("Durasi: ")
+        var durasi = scanner.nextInt()
+        scanner.nextLine()
+
+        if (durasi < 0) {
+            durasi = 1
+        }
+
+            val loan = Loan(judul, peminjam, durasi)
+            println("--- Detail Peminjam ---")
+            println("=========DETAIL PEMINJAM=========\nNama: $peminjam\nJudul: $judul\nDurasi: $durasi\nDenda  : ${loan.calculateFine()}\n================================" )
+        } else
+            println("Yahh, perbanyak membaca kids.")
+
+
+
     }
 
-    val loan = Loan(judul, peminjam, durasi)
-    println("--- Detail Peminjam ---")
-    println("=========DETAIL PEMINJAM=========\nNama: $peminjam\nJudul: $judul\nDurasi: $durasi\nDenda  : ${loan.calculateFine()}\n================================" )
 
-}
+
 
 
