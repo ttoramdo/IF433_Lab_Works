@@ -62,7 +62,61 @@ fun main() {
         } else
             println("Yahh, perbanyak membaca kids.")
 
+    print("Cape kuliah mau nge game dulu gak? 1. Mau, 2. Belajar aja ah: ")
+    val tipeh = scanner.nextInt()
+    scanner.nextLine()
 
+    if (tipeh == 1){
+        println("\n=== MINI RPG BATTLE ===")
+        print("Nama Hero: ")
+        val heroName = scanner.nextLine()
+
+        print("Base Damage: ")
+        val damage = scanner.nextInt()
+        scanner.nextLine()
+
+        val hero = Hero(heroName, damage)
+        var enemyHp = 100
+
+        while (hero.isAlive() && enemyHp > 0){
+            println("\n1. Serang")
+            println("2. Kaburrr")
+            print("Pilihan: ")
+            val pilihan = scanner.nextInt()
+            scanner.nextLine()
+
+            if (pilihan == 1) {
+
+                hero.attack("Enemy")
+                enemyHp -= hero.baseDamage
+                if (enemyHp < 0) enemyHp = 0
+
+                println("HP Enemy tersisa: $enemyHp")
+
+                if (enemyHp > 0) {
+                    val enemyDamage = (10..20).random()
+                    println("Enemy menyerang balik sebesar $enemyDamage!")
+                    hero.takeDamage(enemyDamage)
+                    println("HP Hero tersisa: ${hero.hp}")
+                }
+
+            } else if (pilihan == 2) {
+                println("Hero kabur dari pertarungan!")
+                break
+            }
+        }
+        println("\n=== HASIL PERTARUNGAN ===")
+        if (hero.isAlive() && enemyHp == 0) {
+            println("${hero.name} MENANG!")
+        } else if (!hero.isAlive()) {
+            println("${hero.name} KALAH!")
+        } else {
+            println("Pertarungan selesai.")
+        }
+
+    } else {
+        println("Pilihan yang bagus, semoga kamu makin pintar!")
+    }
 
     }
 
