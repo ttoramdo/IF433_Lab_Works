@@ -10,6 +10,8 @@ class Student (
             println("Data mahasiswa $name mungkin akan bermasalah di sistem")
         } else {
             println("LOG : objek Student $name berhasil dialokasikan di Memory.")
+            println("test")
         }
     }
+
 }
