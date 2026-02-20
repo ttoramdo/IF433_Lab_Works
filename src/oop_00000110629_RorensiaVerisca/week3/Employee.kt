@@ -5,6 +5,7 @@ class Employee(val name: String) {
         set(value) {
             if (value < 0) {
                 println("ERROR: Gaji tidak boleh negatif! Di set ke 0.")
+                field = 0
             } else {
                 field = value
             }
