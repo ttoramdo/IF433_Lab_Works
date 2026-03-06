@@ -22,6 +22,24 @@ fun main(){
         }
         println("=====================")
     }
+    println("\n=== SISTEM PEMBAYARAN ===")
 
+    val ewallet = EWallet("Jeonghan", 50000.00)
+    val creditCard = CreditCard("Jeonghan", 100000.00)
+
+    val payments: List<PaymentMethod> = listOf(ewallet, creditCard)
+
+    for (method in payments) {
+
+        method.processPayment(75000.00)
+
+        if (method is EWallet) {
+            println("Saldo kurang, sistem akan melakukan top up...\n")
+            method.topUp(50000.00)
+            method.processPayment(75000.00)
+        }
+
+        println("------------------")
+    }
 
 }
