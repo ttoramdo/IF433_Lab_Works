@@ -6,7 +6,7 @@ class Gopay:PaymentMethod{
     }
 }
 
-class GCreditCArd:PaymentMethod{
+class CreditCard:PaymentMethod{
     override fun pay(amount: Double) {
         println("Contacting Bank For Rp$amount")
     }
