@@ -1,6 +1,5 @@
 package oop_00000110629_RorensiaVerisca.week6
 
-package oop_<nim>_<nama>.week06
 
 class SmartHomeHub {
 

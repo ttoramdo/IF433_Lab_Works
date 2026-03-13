@@ -5,16 +5,22 @@ fun processCheckout(method: PaymentMethod, amount: Double){
     method.pay(amount)
 }
 
-fun main(){
-    val myWatch = Smartwatch()
-    myWatch.showTime()
+fun main() {
 
-    val myPhone = Smartphone()
+    val lamp = SmartLamp("1", "Ruang Tamu")
+    val speaker = SmartSpeaker("2", "Google Nest Dapur")
+    val cctv = SmartCCTV("3", "Ezviz Garasi")
 
-    val pay1 = Gopay()
-    val pay2 = CreditCard()
+    val hub = SmartHomeHub()
 
-    println("\n====TESTING CHECKOUT====")
-    processCheckout(method= pay1, amount = 50000.0)
-    processCheckout(method= pay2, amount = 150000.0)
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
+
+    println("=== SECURITY MODE AKTIF ===")
+    hub.activateSecurityMode()
+
+    println()
+    println("=== MATIKAN SEMUA PERANGKAT ===")
+    hub.turnOffAllSwitches()
 }
