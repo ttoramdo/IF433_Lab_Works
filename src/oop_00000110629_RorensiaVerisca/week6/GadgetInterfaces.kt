@@ -5,7 +5,7 @@ interface Camera{
         println("Lensa kamera terbuka dan sensor aktif. ")
     }
 }
-interface Cphone{
+interface Phone{
     fun turnOn(){
         println("Sinyal seluler mencari jaringan. ")
     }
