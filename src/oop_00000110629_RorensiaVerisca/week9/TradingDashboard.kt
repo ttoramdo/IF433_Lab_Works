@@ -30,3 +30,5 @@ fun main() {
     worstPerformersString.forEach { println(it) }
     println("Pairs traded: $uniquePairs")
 }
+
+//commit 20
