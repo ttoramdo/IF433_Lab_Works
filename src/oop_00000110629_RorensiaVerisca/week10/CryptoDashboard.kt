@@ -19,4 +19,16 @@ fun main() {
 
     txRepo.add(Transaction("TX001", 150000.0))
     txRepo.add(Transaction("TX002", 250000.0))
+
+    println("\n=== TRANSACTION HISTORY ===")
+
+    txRepo.getAll().forEach {
+        println("Transaction ID: ${it.id} | Amount: ${it.amount}")
+    }
+
+    println("\n=== SEARCH RESULT ===")
+
+    coinRepo.search("BTC").forEach {
+        println(it)
+    }
 }
