@@ -16,13 +16,6 @@ fun main() {
         println("(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
-    SmartDevice("Ezviz Outdoor", "Camera").apply {
-        isOnline = true
-        powerLoad = 5
-    }.also {
-        println("(LOG) Kamera terhubung")
-        homeDevices.add(it)
-    }
     val acUnit = run {
         SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
     }
