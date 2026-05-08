@@ -34,3 +34,5 @@ fun main() {
     }
     println("Total penggunaan daya: $totalPower Watt")
 }
+
+// check poin ke 3
