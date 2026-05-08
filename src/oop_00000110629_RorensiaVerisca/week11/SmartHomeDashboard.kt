@@ -3,14 +3,17 @@ package oop_00000110629_RorensiaVerisca.week11
 fun main() {
     val homeDevices = mutableListOf<SmartDevice>()
 
-    SmartDevice(
-        name = "Philips WiZ Living Room",
-        category = "Lighting",
-        isOnline = true,
+    SmartDevice("Philips WiZ Living Room", "Lighting").apply {
+        isOnline = true
         powerLoad = 12
-    ).apply {
-
     }.also {
+        homeDevices.add(it)
+    }
+    SmartDevice("Ezviz Outdoor", "Camera").apply {
+        isOnline = true
+        powerLoad = 5
+    }.also {
+        println("(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
 }
