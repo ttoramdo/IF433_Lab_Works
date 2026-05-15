@@ -35,3 +35,4 @@ fun main(){
         println("(Opsional: Berikan chicken jerky secara manuall)")
     }
 }//commit 20
+//commit 12
