@@ -27,4 +27,8 @@ fun main(){
     val feedingResult = runCatching {
         dispenseKibble(30, 1000, false)
     }
+    feedingResult.onSuccess { newStock ->
+        currentKibbleStock = newStock
+        println("Makan sore sukses! Sisa stok kibble: $currentKibbleStock gr")
+    }
 }
