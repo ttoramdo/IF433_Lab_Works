@@ -12,4 +12,13 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 
 fun main(){
     var currentKibbleStock = 50
+    try {
+        currentKibbleStock = dispenseKibble(80, currentKibbleStock, false)
+    } catch (e: DispenserJamException) {
+        println("Peringatan: ${e.message}")
+    } catch (e: FoodEmptyException) {
+        println("Peringatan: ${e.message}")
+    } catch (e: Exception) {
+        println("Terjadi kesalahan umum.")
+    }
 }
