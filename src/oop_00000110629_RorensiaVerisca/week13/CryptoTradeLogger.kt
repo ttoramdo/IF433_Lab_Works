@@ -9,3 +9,17 @@ data class TradeRecord(
     val pnl: Double
 )
 fun TradeRecord.toCsv(): String = "$id,$symbol,$type,$margin,$pnl"
+
+fun fromCsvTrade(line: String): TradeRecord? {
+    val parts = line.split(",")
+
+    if (parts.size != 5) return null
+
+    val id = parts[0].toIntOrNull() ?: return null
+    val symbol = parts[1]
+    val type = parts[2]
+    val margin = parts[3].toDoubleOrNull() ?: return null
+    val pnl = parts[4].toDoubleOrNull() ?: return null
+
+    return TradeRecord(id, symbol, type, margin, pnl)
+}
