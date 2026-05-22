@@ -53,4 +53,6 @@ fun main() {
     )
     saveTrades(simulatedTrades, csvPath)
     File(csvPath).appendText("CORRUPT_ID, DOGEUSDT, Hold, XX ,YY\n")
+    val loadedData = loadTrades(csvPath)
+    val totalPnl = loadedData.sumOf { it.pnl }
 }
