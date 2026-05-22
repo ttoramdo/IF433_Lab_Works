@@ -55,4 +55,11 @@ fun main() {
     File(csvPath).appendText("CORRUPT_ID, DOGEUSDT, Hold, XX ,YY\n")
     val loadedData = loadTrades(csvPath)
     val totalPnl = loadedData.sumOf { it.pnl }
+    println("\n=== DAFTAR TRANSAKSI VALID ===")
+    loadedData.forEach { println(it) }
+    println("==== TOTAL PnL BERSIH: $totalPnl ====")
+
+    println("\n=== DAFTAR TRANSAKSI VALID ===")
+    loadedData.forEach { println(it) }
+    println("==== TOTAL PnL BERSIH: $totalPnl ====")
 }
