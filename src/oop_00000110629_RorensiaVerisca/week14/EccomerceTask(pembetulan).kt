@@ -58,3 +58,5 @@ fun main() {
     processor.processOrder("Laptop", 15_000_000.0, VipPricing())
     processor.processOrder("Mouse", 200_000.0, RegularPricing())
 }
+
+//check point 1 ketinggala
