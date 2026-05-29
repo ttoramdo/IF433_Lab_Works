@@ -7,3 +7,6 @@ interface Printable{
 interface Scanable{
     fun scan(doc: String)
 }
+class ModernSimplePrinter: Printable{
+    override fun print(doc: String) = println("Printing Securely : $doc")
+}
